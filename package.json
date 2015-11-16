@@ -1,0 +1,30 @@
+{
+  "name": "study-test-es6-universal-lib",
+  "version": "1.0.0",
+  "description": "Studying how one would test node/browser ES6 librairies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-cov": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasduteil/study-test-es6-universal-lib.git"
+  },
+  "keywords": [
+    "study",
+    "test",
+    "es6",
+    "universal",
+    "experimental"
+  ],
+  "author": {
+    "name": "Douglas Duteil",
+    "email": "douglasduteil@gmail.com"
+  },
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/douglasduteil/study-test-es6-universal-lib/issues"
+  },
+  "homepage": "https://github.com/douglasduteil/study-test-es6-universal-lib#readme"
+}

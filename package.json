@@ -4,7 +4,9 @@
   "description": "Studying how one would test node/browser ES6 librairies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:node",
+    "test:node": "node test/browser.js",
+    "test:browser": "zuul test/browser.js",
     "test-cov": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/douglasduteil/study-test-es6-universal-lib/issues"
   },
-  "homepage": "https://github.com/douglasduteil/study-test-es6-universal-lib#readme"
+  "homepage": "https://github.com/douglasduteil/study-test-es6-universal-lib#readme",
+  "devDependencies": {
+    "tape": "^4.2.2",
+    "zuul": "^3.7.3"
+  }
 }

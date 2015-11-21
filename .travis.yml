@@ -8,6 +8,7 @@ cache:
 language: node_js
 matrix:
   include:
+    #
     - node_js: '0.8'
     - node_js: '0.10'
     - node_js: '0.11'
@@ -18,9 +19,12 @@ matrix:
     - node_js: '4'
     - node_js: '5'
     - node_js: node
+    #
     - node_js: node
-    - node_js: "stable"
       env: COVERAGE=true
+    #
+    - node_js: node
+      env: TASK=browser
 before_install:
   - npm install -g npm@2
   - npm install -g npm
@@ -28,7 +32,8 @@ before_install:
 after_script:
   - "[ $COVERAGE == false ] || npm run test-cov"
   - "[ $COVERAGE == false ] || cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js && rm -rf ./coverage"
-
+script: "npm run test:$TASK"
 env:
   global:
     - COVERAGE=false
+    - TASK=node

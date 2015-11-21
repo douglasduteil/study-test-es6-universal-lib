@@ -6,9 +6,9 @@
   "scripts": {
     "test": "npm run test:node",
     "test:node": "node test/browser.js",
-    "test:browser": "npm run write-zuul && zuul test/browser.js",
+    "test:browser": "npm run write-zuul && zuul test/browser.js --no-coverage",
     "test-cov": "echo \"Error: no test specified\" && exit 1",
-    "write-zuul": "COMMIT_SHA1=$(echo $TRAVIS_COMMIT | cut -c1-7 ) && printf \"name: $TRAVIS_BRANCH ($COMMIT_SHA1) - $TRAVIS_JOB_NUMBER\\nui: tape\\nbrowsers:\\n  - name: $BROWSER_NAME\\n    version: $BROWSER_VERSION\\n\">.zuul.yml"
+    "write-zuul": "COMMIT_SHA1=$(echo $TRAVIS_COMMIT | cut -c1-7 ) && printf \"name: $TRAVIS_BRANCH ($COMMIT_SHA1) - $TRAVIS_JOB_NUMBER\\nui: tape\\nhtml: test/basic.html\\nbrowsers:\\n  - name: $BROWSER_NAME\\n    version: $BROWSER_VERSION\\n\">.zuul.yml"
   },
   "repository": {
     "type": "git",

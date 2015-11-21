@@ -26,8 +26,10 @@ matrix:
     - node_js: node
       env: TASK=browser
 before_install:
-  - npm install -g npm@2
-  - npm install -g npm
+  - "NPM_VERSION=$(npm --version)"
+  - "[ '2.0.0' != `echo -e \"2.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm@2"
+  - "NPM_VERSION=$(npm --version)"
+  - "[ '3.0.0' != `echo -e \"3.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm"
   - "[ $COVERAGE == false ] || npm install codecov.io"
 after_script:
   - "[ $COVERAGE == false ] || npm run test-cov"

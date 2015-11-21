@@ -25,6 +25,20 @@ matrix:
     #
     - node_js: node
       env: TASK=browser BROWSER_NAME=opera BROWSER_VERSION="11..latest"
+    - node_js: node
+      env: TASK=browser BROWSER_NAME=ie BROWSER_VERSION="9..latest"
+    - node_js: node
+      env: TASK=browser BROWSER_NAME=chrome BROWSER_VERSION="41..beta"
+    - node_js: node
+      env: TASK=browser BROWSER_NAME=firefox BROWSER_VERSION="36..latest"
+    - node_js: node
+      env: TASK=browser BROWSER_NAME=ipad BROWSER_VERSION="['6.1', '7.1', '8.2']"
+    - node_js: node
+      env: TASK=browser BROWSER_NAME=iphone BROWSER_VERSION="['6.1', '7.1', '8.2']"
+    - node_js: node
+      env: TASK=browser BROWSER_NAME=safari BROWSER_VERSION="5..latest"
+    - node_js: node
+      env: TASK=browser BROWSER_NAME=android BROWSER_VERSION="4.0..latest"
 before_install:
   - "NPM_VERSION=$(npm --version)"
   - "[ '2.0.0' != `echo -e \"2.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm@2"

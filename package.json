@@ -6,8 +6,9 @@
   "scripts": {
     "test": "npm run test:node",
     "test:node": "node test/browser.js",
-    "test:browser": "zuul test/browser.js",
-    "test-cov": "echo \"Error: no test specified\" && exit 1"
+    "test:browser": "npm run write-zuul && zuul test/browser.js",
+    "test-cov": "echo \"Error: no test specified\" && exit 1",
+    "write-zuul": "printf \"ui: tape\\nbrowsers:\\n  - name: $BROWSER_NAME\\n    version: $BROWSER_VERSION\\n\">.zuul.yml"
   },
   "repository": {
     "type": "git",

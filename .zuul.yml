@@ -1,6 +1,0 @@
-name: quickstart
-ui: tape
-browsers:
-  - name: firefox
-    platform: linux
-    version: 30

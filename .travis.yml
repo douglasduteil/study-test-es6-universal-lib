@@ -16,8 +16,8 @@ before_install:
   - "NPM_VERSION=$(npm --version)"
   - "[ '3.0.0' != `echo -e \"3.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm"
   - "[ $COVERAGE == false ] || npm install codecov.io"
-  - "export SAUCE_ACCESS_KEY=$MASTER_SAUCE_ACCESS_KEY"
-  - "export SAUCE_USERNAME=$MASTER_SAUCE_USERNAME"
+  - "[ $TASK != browser ] || [ $TRAVIS_PULL_REQUEST != false ] || [ $TRAVIS_BRANCH != master ] || export SAUCE_ACCESS_KEY=$MASTER_SAUCE_ACCESS_KEY"
+  - "[ $TASK != browser ] || [ $TRAVIS_PULL_REQUEST != false ] || [ $TRAVIS_BRANCH != master ] || export SAUCE_USERNAME=$MASTER_SAUCE_USERNAME"
 after_script:
   - "[ $COVERAGE == false ] || npm run test-cov"
   - "[ $COVERAGE == false ] || cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js && rm -rf ./coverage"

@@ -9,6 +9,6 @@
 
 [saucelabs-master-branch-url]: https://saucelabs.com/u/dd-e731285-master
 [saucelabs-master-branch-image]: https://saucelabs.com/browser-matrix/dd-e731285-master.svg
-[travis-url]: http://travis-ci.org/douglasduteil/isparta
-[travis-image]: http://travis-ci.org/douglasduteil/isparta.svg?branch=master
+[travis-url]: http://travis-ci.org/douglasduteil/study-test-es6-universal-lib
+[travis-image]: http://travis-ci.org/douglasduteil/study-test-es6-universal-lib.svg?branch=master
 

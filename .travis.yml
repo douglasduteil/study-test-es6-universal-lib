@@ -7,6 +7,11 @@ cache:
   - node_modules
 language: node_js
 matrix:
+  allow_failures: 
+    - node_js: '0.8'
+    - node_js: '0.10'
+    - node_js: '0.11'
+  fast_finish: true
   include:
     #
     - node_js: '0.8'

@@ -1,0 +1,32 @@
+version: "{build}"
+clone_depth: 1
+environment:
+  matrix:
+    - nodejs_version: "0"
+    - nodejs_version: "1"
+    - nodejs_version: "2"
+    - nodejs_version: "3"
+    - nodejs_version: "4"
+    - nodejs_version: "5"
+    - nodejs_version: "6"
+    - nodejs_version: "stable"
+matrix:
+  fast_finish: true
+cache:
+  - node_modules
+platform:
+  - x86
+  - x64
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  
+  - npm config set spin false
+  # Forcing npm@3
+  - ps: "$NPM_VERSION = npm --version"
+  - ps: "if ([version]\"3.0.0\" -gt [version]$NPM_VERSION) { npm install -g npm@2 ; npm install -g npm@3 }"
+  - npm install
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+build: off

@@ -13,4 +13,4 @@
 [travis-url]: http://travis-ci.org/douglasduteil/study-test-es6-universal-lib
 [travis-image]: http://travis-ci.org/douglasduteil/study-test-es6-universal-lib.svg?branch=master
 [appveyor-url]: https://ci.appveyor.com/project/douglasduteil/study-test-es6-universal-lib
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva/branch/master?svg=true
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/db6fp2ovsh9c8eqh/branch/master?svg=true

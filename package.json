@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/douglasduteil/study-test-es6-universal-lib#readme",
   "devDependencies": {
-    "tape": "^4.2.2",
-    "zuul": "^3.7.3"
+    "tape": "^4.7.0",
+    "zuul": "^3.11.1"
   }
 }

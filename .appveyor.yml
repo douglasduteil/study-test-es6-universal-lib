@@ -1,5 +1,5 @@
 version: "{build}"
-clone_depth: 1
+clone_depth: 5
 environment:
   matrix:
     - nodejs_version: "4"
@@ -7,7 +7,6 @@ environment:
     - nodejs_version: "6"
     - nodejs_version: "7"
     - nodejs_version: "8"
-    - nodejs_version: "stable"
 matrix:
   allow_failures:
     - nodejs_version: "4"
@@ -29,3 +28,5 @@ test_script:
   - npm --version
   - npm test
 build: off
+pull_requests:
+  do_not_increment_build_number: true

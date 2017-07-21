@@ -19,11 +19,9 @@ platform:
   - x64
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
-  
+
   - npm config set spin false
-  # Forcing npm@3
-  - ps: "$NPM_VERSION = npm --version"
-  - ps: "if ([version]\"3.0.0\" -gt [version]$NPM_VERSION) { npm install -g npm@2 ; npm install -g npm@3 }"
+  - npm install -g npm
   - npm install
 test_script:
   - node --version

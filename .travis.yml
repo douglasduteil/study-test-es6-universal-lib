@@ -19,14 +19,13 @@ before_install:
   - "NPM_VERSION=$(npm --version)"
   - "[ '2.0.0' != `echo -e \"2.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm@2"
   - "[ '3.0.0' != `echo -e \"3.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm"
-  - "npm install -g greenkeeper-lockfile@1"
   - "[ $TASK != browser ] || [ $TRAVIS_PULL_REQUEST != false ] || [ $TRAVIS_BRANCH != master ] || export SAUCE_ACCESS_KEY=$MASTER_SAUCE_ACCESS_KEY"
   - "[ $TASK != browser ] || [ $TRAVIS_PULL_REQUEST != false ] || [ $TRAVIS_BRANCH != master ] || export SAUCE_USERNAME=$MASTER_SAUCE_USERNAME"
 
 before_script:
-  - "greenkeeper-lockfile-update"
+  - "npx greenkeeper-lockfile-update -p greenkeeper-lockfile@1"
 after_script:
-  - "greenkeeper-lockfile-upload"
+  - "npx greenkeeper-lockfile-upload -p greenkeeper-lockfile@1"
 
 script: "npm run test:$TASK"
 

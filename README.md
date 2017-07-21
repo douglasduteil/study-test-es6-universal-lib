@@ -1,10 +1,9 @@
 # study-test-es6-universal-lib
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/douglasduteil/study-test-es6-universal-lib.svg)](https://greenkeeper.io/)
-
  [![Build Status][travis-image]][travis-url]
  [![Build Status][appveyor-image]][appveyor-url] 
  [![Sauce Test Status][saucelabs-master-branch-status-image]][saucelabs-master-branch-url] 
+ [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
  [![Sauce Test Status - Master Branch][saucelabs-master-branch-matrix-image]][saucelabs-master-branch-url] 
 
@@ -18,3 +17,5 @@
 [travis-image]: http://travis-ci.org/douglasduteil/study-test-es6-universal-lib.svg?branch=master
 [appveyor-url]: https://ci.appveyor.com/project/douglasduteil/study-test-es6-universal-lib
 [appveyor-image]: https://ci.appveyor.com/api/projects/status/db6fp2ovsh9c8eqh/branch/master?svg=true
+[greenkeeper-image]: hhttps://badges.greenkeeper.io/douglasduteil/study-test-es6-universal-lib.svg
+[greenkeeper-url]: https://greenkeeper.io/

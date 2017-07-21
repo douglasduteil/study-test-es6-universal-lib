@@ -20,6 +20,9 @@ const travisConfig = {
     '(' + commitSha1 + ')',
     '-',
     process.env.TRAVIS_JOB_NUMBER,
+    '-',
+    process.env.BROWSER_NAME,
+    process.env.BROWSER_VERSION
   ].join(' '),
   ui: 'tape'
 };

@@ -43,10 +43,14 @@ before_install:
   - "NPM_VERSION=$(npm --version)"
   - "[ '2.0.0' != `echo -e \"2.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm@2"
   - "[ '3.0.0' != `echo -e \"3.0.0\\n$NPM_VERSION\" | sort -Vr | head -n1` ] || npm install -g npm"
+  - "npm install -g greenkeeper-lockfile@1"
   - "[ $COVERAGE == false ] || npm install codecov.io"
   - "[ $TASK != browser ] || [ $TRAVIS_PULL_REQUEST != false ] || [ $TRAVIS_BRANCH != master ] || export SAUCE_ACCESS_KEY=$MASTER_SAUCE_ACCESS_KEY"
   - "[ $TASK != browser ] || [ $TRAVIS_PULL_REQUEST != false ] || [ $TRAVIS_BRANCH != master ] || export SAUCE_USERNAME=$MASTER_SAUCE_USERNAME"
+before_script:
+  - "greenkeeper-lockfile-update"
 after_script:
+  - "greenkeeper-lockfile-upload"
   - "[ $COVERAGE == false ] || npm run test-cov"
   - "[ $COVERAGE == false ] || cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js && rm -rf ./coverage"
 script: "npm run test:$TASK"

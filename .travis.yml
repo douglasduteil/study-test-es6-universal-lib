@@ -43,6 +43,12 @@ jobs:
     - stage: Node test
       node_js: node
     -
+      node_js: node
+      script:
+        - npm run test-cov -- --reporter lcovonly
+        - npx codecov
+
+    -
       node_js: '4'
     -
       node_js: '5'
@@ -52,13 +58,6 @@ jobs:
       node_js: '7'
     -
       node_js: '8'
-
-    #
-
-    - stage: test coverage
-      script:
-        - npm run test-cov -- --reporter lcovonly
-        - npx codecov
 
     #
 

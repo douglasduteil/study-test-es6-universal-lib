@@ -7,7 +7,7 @@
     "test": "npm run test:node",
     "test:node": "node test/browser.js",
     "test:browser": "zuul test/browser.js --no-coverage",
-    "test-cov": "echo \"Error: no test specified\" && exit 1"
+    "test-cov": "istanbul cover tests/browser.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/douglasduteil/study-test-es6-universal-lib#readme",
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "tape": "^4.7.0",
     "zuul": "^3.11.1"
   }

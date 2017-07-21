@@ -12,8 +12,9 @@ if (!global.console.info) {
 }
 
 var test = require('tape');
+var foo = require('../src/foo.js').foo;
 
 test('dummy', function (t) {
-  t.equal('a', 'a');
+  t.equal('foo', foo);
   t.end();
 })

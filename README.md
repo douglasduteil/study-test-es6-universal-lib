@@ -17,5 +17,5 @@
 [travis-image]: http://travis-ci.org/douglasduteil/study-test-es6-universal-lib.svg?branch=master
 [appveyor-url]: https://ci.appveyor.com/project/douglasduteil/study-test-es6-universal-lib
 [appveyor-image]: https://ci.appveyor.com/api/projects/status/db6fp2ovsh9c8eqh/branch/master?svg=true
-[greenkeeper-image]: hhttps://badges.greenkeeper.io/douglasduteil/study-test-es6-universal-lib.svg
+[greenkeeper-image]: https://badges.greenkeeper.io/douglasduteil/study-test-es6-universal-lib.svg
 [greenkeeper-url]: https://greenkeeper.io/

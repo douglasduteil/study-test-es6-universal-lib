@@ -23,9 +23,9 @@ before_install:
   - "[ $TASK != browser ] || [ $TRAVIS_PULL_REQUEST != false ] || [ $TRAVIS_BRANCH != master ] || export SAUCE_USERNAME=$MASTER_SAUCE_USERNAME"
 
 before_script:
-  - "npx greenkeeper-lockfile-update -p greenkeeper-lockfile@1"
+  - "npx -p greenkeeper-lockfile@1 -c greenkeeper-lockfile-update"
 after_script:
-  - "npx greenkeeper-lockfile-upload -p greenkeeper-lockfile@1"
+  - "npx -p greenkeeper-lockfile@1 -c greenkeeper-lockfile-upload "
 
 script: "npm run test:$TASK"
 

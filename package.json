@@ -7,7 +7,7 @@
     "test": "npm run test:node",
     "test:node": "node test/browser.js",
     "test:browser": "zuul test/browser.js --no-coverage",
-    "test-cov": "istanbul cover tests/browser.js"
+    "test-cov": "istanbul cover test/browser.js"
   },
   "repository": {
     "type": "git",
